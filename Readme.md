@@ -9,7 +9,7 @@ The application consumes the [NewsAPI](https://newsapi.org/) hence the applicati
 
 
 ## Live link
-Visit the application on https://knownews.herokuapp.com/ .
+Visit the application on https://know-news.herokuapp.com/ .
 
 ## Technologies Used
 Technologies used to develop this application:
