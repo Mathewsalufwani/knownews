@@ -1,4 +1,5 @@
 {% macro displaySourceList(source_list) %} {% for source in source_list %}
+
 <div class="col-sm-4">
     <div class="well" style="height:260px">
         <h4><a href ="{{source.url}}">{{source.name}}</a></h4>
@@ -12,6 +13,7 @@
 {% endfor %} {% endmacro %}
 
 {% macro displayArticle(articles_list) %} {% for article in articles_list %} {% if article.urlToImage %}
+
 <div class="col-sm-4">
     <div style="height:450px">
         <img class="img-responsive" src="{{article.urlToImage}}" alt="{{article.title}}">
