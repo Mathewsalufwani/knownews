@@ -1,12 +1,13 @@
 {% extends 'base.html'%}
-{% block content %}
+{% import 'macros.html' as macro%}
+{% block content%}
 <body>
     <!-- Popular movie section  -->
-    <h3> Popular Movies</h3>
+    <h3 class = "text-center">News Sources</h3>
      <ul>
-        {% for popular_movie in popular %}
-            <li>{{ popular_movie.name}}</li>
-        {% endfor %}
+        
+        {{ macro.displaySourceList(popular)}}
+    
     </ul>
 </body>
-{% endblock%}
+{% endblock %}
