@@ -10,3 +10,15 @@
     </div>
 </div>
 {% endfor %} {% endmacro %}
+
+{% macro displayArticle(articles_list) %} {% for article in articles_list %} {% if article.urlToImage %}
+<div class="col-sm-4">
+    <div style="height:450px">
+        <img class="img-responsive" src="{{article.urlToImage}}" alt="{{article.title}}">
+        <h4>{{article.title}}</h4>
+        <p>{{article.description | truncate(50)}}</p>
+        <p>Created on: {{article.publishedAt}}</p>
+        <a href="{{article.url}}" class="btn btn-info">Read More...</a>
+    </div>
+</div>
+{% endif %} {% endfor %} {% endmacro %}
