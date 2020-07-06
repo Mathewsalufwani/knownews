@@ -11,3 +11,11 @@ def index():
     '''
     popular_news = get_news()
     return render_template('index.html', popular = popular_news)
+
+@app.route('/articles/<source>')
+def articles(source):
+    '''
+    View articles from source
+    '''
+    articles = get_articles(source)
+    return render_template('articles.html', articles=articles)
