@@ -2,12 +2,7 @@
 {% import 'macros.html' as macro%}
 {% block content%}
 <body>
-    <!-- Popular movie section  -->
     <h3 class = "text-center">News Sources</h3>
-     <ul>
-        
-        {{ macro.displaySourceList(popular)}}
-    
-    </ul>
+    {{ macro.displaySourceList(popular)}}
 </body>
 {% endblock %}
