@@ -41,13 +41,14 @@ def process_results(source_list):
     '''
     news_results = []
     for news_item in source_list:
+        id = news_item.get('id')
         name = news_item.get('name')
         description = news_item.get('description')
         url = news_item.get('url')
         category = news_item.get('category')
         language = news_item.get('language')
 
-        source_object = News(name, description, url, category, language)
+        source_object = News(id, name, description, url, category, language)
         news_results.append(source_object)
 
     return news_results
