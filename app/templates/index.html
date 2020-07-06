@@ -1,1 +1,10 @@
 <h1> Hello World </h1>
+<body>
+    <!-- Popular movie section  -->
+    <h3> Popular Movies</h3>
+     <ul>
+        {% for popular_movie in popular %}
+            <li>{{ popular_movie.name}}</li>
+        {% endfor %}
+    </ul>
+</body>

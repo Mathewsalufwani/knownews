@@ -22,14 +22,14 @@ def get_news():
 
         news_results = None
 
-        if get_news_response['results']:
-            news_results_list = get_news_response['results']
+        if get_news_response['sources']:
+            news_results_list = get_news_response['sources']
             news_results = process_results(news_results_list)
 
 
     return news_results
 
-def process_results(news_list):
+def process_results(source_list):
     '''
     Function  that processes the news result and transform them to a list of Objects
 
@@ -40,11 +40,14 @@ def process_results(news_list):
         news_results: A list of movie objects
     '''
     news_results = []
-    for news_item in news_list:
+    for news_item in source_list:
         name = news_item.get('name')
         description = news_item.get('description')
         url = news_item.get('url')
         category = news_item.get('category')
         language = news_item.get('language')
 
-    return movie_results
+        source_object = News(name, description, url, category, language)
+        news_results.append(source_object)
+
+    return news_results
