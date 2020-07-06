@@ -1,6 +1,9 @@
 {% extends 'base.html'%}
 {% import 'macros.html' as macro%}
 {% block content%}
+<head>
+    <title>{{title}}</title>
+</head>
 <body>
     <h3 class = "text-center">News Sources</h3>
     {{ macro.displaySourceList(popular)}}
